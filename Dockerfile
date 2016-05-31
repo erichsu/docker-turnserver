@@ -1,11 +1,8 @@
-FROM phusion/baseimage
-MAINTAINER Brian Prodoehl <bprodoehl@connectify.me>
+FROM debian
+MAINTAINER Eric Hsu <erichsu@livemail.tw>
 
 # Set correct environment variables.
 ENV HOME /root
-
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
 
 RUN apt-get update && apt-get dist-upgrade -y
 RUN apt-get install -y gdebi-core
