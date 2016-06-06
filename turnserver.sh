@@ -19,7 +19,7 @@ if [ ! -e /tmp/turnserver.configured ]
 then
     if [ -z $SKIP_AUTO_IP ]
     then
-        echo external-ip=$EXTERNAL_IP > /etc/turnserver.conf
+        echo external-ip=$EXTERNAL_IP >> /etc/turnserver.conf
     fi
     echo listening-port=$PORT >> /etc/turnserver.conf
 
