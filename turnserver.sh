@@ -27,6 +27,16 @@ then
     then
         echo listening-ip=$EXTERNAL_IP >> /etc/turnserver.conf
     fi
+    
+    if [ ! -z $USER_CREDENTIAL ]
+    then
+        echo user=$USER_CREDENTIAL >> /etc/turnserver.conf
+    fi
+    
+    if [ ! -z $REALM ]
+    then
+        echo realm=$REALM >> /etc/turnserver.conf
+    fi
 
     touch /tmp/turnserver.configured
 fi
